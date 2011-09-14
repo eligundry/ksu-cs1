@@ -8,15 +8,16 @@ using namespace std;
 
 int main()
 {
-	int negative = 0,
-		positive = 0,
-		numbers[10];
+	int negative = 0;
+	int positive = 0;
+	int numbers [10];
 	
 	for (int i = 0; i < 10; i++) {
-		// Gets user's input
+		// Get user input
 		cout << "Please enter number " << i + 1 << endl;
 		cin >> numbers[i];
 
+		// Calculate totals
 		if (numbers[i] <= 0)
 			negative += numbers[i];
 		else
