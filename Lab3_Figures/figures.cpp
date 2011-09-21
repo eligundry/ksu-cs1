@@ -9,15 +9,18 @@ using namespace std;
 
 int main()
 {
-	int i, n, m, size = 0;
+	int i, n, s, j, size = 0;
 	string line;
 	
 	cout << "Enter the size of your shape:" << endl;
 	cin >> size;
 
-	// Outputs square
-	for (i = 0; i < size; i++) {
-		line = "";
+	/*
+	 * Outputs square
+	 * Each time through the loop, i will increment
+	 * and line will reset. Loop stops when i < size.
+	 */
+	for (i = 0; i < size; i++, line = "") {
 
 		for (n = 0; n < size; n++)
 			line += '*';
@@ -27,9 +30,12 @@ int main()
 
 	cout << endl;
 
-	// Outputs first triangle
-	for (i = 0; i < size; i++) {
-		line = "";
+	/*
+	 * Outputs first triangle
+	 * Each time through the loop, i will increment
+	 * and line will reset. Loop stops when i < size.
+	 */
+	for (i = 0; i < size; i++, line = "") {
 
 		for (n = 0; n <= i; n++)
 			line += '*';
@@ -37,26 +43,24 @@ int main()
 		cout << line << endl;
 	}
 	
-	int spaceCounter, starCounter;
-	string spaces, stars;
-	
 	cout << endl;
 		
-	// Outputs the second triangle
-	for (spaceCounter = size - 1, starCounter = 1; starCounter <= size; starCounter++, spaceCounter--) {
-		
-		// Clears out the previous stars and spaces variable.
-		spaces = "";  
-		stars = "";
+	/*
+	 * Outputs the second triangle
+	 * j counts the stars
+	 * s counts the spaces 
+	 * Each time through the loop, s will increment,
+	 * j will decrement, and line will reset. Loop
+	 * will stop when s equals the entered size.
+	 */
+	for (j = size - 1, s = 1; s <= size; s++, j--, line = "") {
 
-		for (i = 0; i < spaceCounter; i++)
-			spaces += ' ';
+		for (i = 0; i < j; i++)
+			line += ' ';
 		
-		for (i = 0; i < starCounter; i++)
-			stars += '*';
+		for (i = 0; i < s; i++)
+			line += '*';
 
-		cout << spaces << stars << endl;
+		cout << line << endl;
 	}
-	
-	return 0;
 }

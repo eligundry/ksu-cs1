@@ -18,8 +18,45 @@ int main()
 	for (int i = 0; i < 2; i++) {
 		switch (number[i]) {
 			case '1':
-				tens = "ten";
-				singles = "one";
+				// Output the strings for 10-19
+				if (i == 0) {
+					switch (number[1]) {
+						case '1':
+							cout << "eleven";
+							break;
+						case '2':
+							cout << "twelve";
+							break;
+						case '3':
+							cout << "thirteen";
+							break;
+						case '4':
+							cout << "fourteen";
+							break;
+						case '5':
+							cout << "fifteen";
+							break;
+						case '6':
+							cout << "sixteen";
+							break;
+						case '7':
+							cout << "seventeen";
+							break;
+						case '8':
+							cout << "eighteen";
+							break;
+						case '9':
+							cout << "nineteen";
+							break;
+						default:
+							cout << "ten";
+							break;
+					}
+					// Ends the loop at this point.
+					i = 2;
+				} else {
+					singles = "one";
+				}
 				break;
 			case '2':
 				tens = "twenty";
