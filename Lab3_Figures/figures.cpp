@@ -20,9 +20,9 @@ int main()
 	 * Each time through the loop, i will increment
 	 * and line will reset. Loop stops when i < size.
 	 */
-	for (i = 0; i < size; i++, line = "") {
+	for (i = 0; i < size; ++i, line = "") {
 
-		for (n = 0; n < size; n++)
+		for (n = 0; n < size; ++n)
 			line += '*';
 
 		cout << line << endl;
@@ -35,9 +35,9 @@ int main()
 	 * Each time through the loop, i will increment
 	 * and line will reset. Loop stops when i < size.
 	 */
-	for (i = 0; i < size; i++, line = "") {
+	for (i = 0; i < size; ++i, line = "") {
 
-		for (n = 0; n <= i; n++)
+		for (n = 0; n <= i; ++n)
 			line += '*';
 
 		cout << line << endl;
@@ -47,18 +47,18 @@ int main()
 		
 	/*
 	 * Outputs the second triangle
-	 * j counts the stars
-	 * s counts the spaces 
+	 * s counts the stars
+	 * j counts the spaces 
 	 * Each time through the loop, s will increment,
 	 * j will decrement, and line will reset. Loop
 	 * will stop when s equals the entered size.
 	 */
-	for (j = size - 1, s = 1; s <= size; s++, j--, line = "") {
+	for (j = size - 1, s = 1; s <= size; ++s, --j, line = "") {
 
-		for (i = 0; i < j; i++)
+		for (i = 0; i < j; ++i)
 			line += ' ';
 		
-		for (i = 0; i < s; i++)
+		for (i = 0; i < s; ++i)
 			line += '*';
 
 		cout << line << endl;

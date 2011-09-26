@@ -15,7 +15,7 @@ int main()
 	cout << "Please enter a two digit number" << endl;
 	cin >> number;
 
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 2; ++i) {
 		switch (number[i]) {
 			case '1':
 				// Output the strings for 10-19
