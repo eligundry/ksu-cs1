@@ -13,8 +13,8 @@ using namespace std;
 
 int main()
 {
-	int operation, exponent;
-	double base, result;
+	int operation;
+	double base, result, exponent;
 	bool shouldContinue = true;
 
 	do {
@@ -24,37 +24,29 @@ int main()
 		// Now, let's do our math and store it in result
 		// I used a nested switch statement cause I didn't
 		// want to repeat myself with prompts.
-		switch (operation) {
-			case 1:
-			case 2:
-			case 3:
-			case 4:
-				cout << "Enter base: ";
-				cin >> base;
-				switch (operation) {
-					case 1:
-						result = abs(base);
-						break;
-					case 2:
-						result = ceil(base);
-						break;
-					case 3:
-						cout << "Enter exponent: ";
-						cin >> exponent;
-						result = pow(base, exponent); 
-						break;
-					case 4:
-						result = log(base);
-						break;
-				}
-				// Absolute value
-				cout << "The result is: " << result << endl;
-				break;
-			default:
-				shouldContinue = false;
-				break;
+		if (operation >= 1 && operation <= 4) {
+			cout << "Enter number: ";
+			cin >> base;
+			switch (operation) {
+				case 1:
+					result = abs(base);
+					break;
+				case 2:
+					result = ceil(base);
+					break;
+				case 3:
+					cout << "Enter exponent: ";
+					cin >> exponent;
+					result = pow(base, exponent); 
+					break;
+				case 4:
+					result = log(base);
+					break;
+			}
+			cout << "The result is: " << result << endl << endl;
+		} else {
+			shouldContinue = false;
 		}
-		cout << endl;
 	} while (shouldContinue == true);
 
 	return 0;
