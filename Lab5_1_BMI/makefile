@@ -1,2 +1,2 @@
 all:
-	g++ bmi.cpp -0 bmi
+	g++ bmi.cpp -o bmi
