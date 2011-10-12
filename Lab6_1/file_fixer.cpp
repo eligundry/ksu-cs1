@@ -9,9 +9,14 @@
 #include <iostream>
 #include <fstream>
 
-using namespace std;
-
 int main()
 {
+	using namespace std;
+	ifstream in_stream;
+	ofstream out_stream;
+
+	in_stream.open("proj-8.dat");
+
+	in_stream.close();
 	return 0;
 }
