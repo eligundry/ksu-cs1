@@ -1,2 +1,2 @@
 all:
-	g++ file_fixer.cpp -0 file_fixer
+	g++ file_fixer.cpp -o file_fixer
