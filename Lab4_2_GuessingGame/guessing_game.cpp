@@ -16,7 +16,8 @@ int main()
 {
 	srand(time(NULL));
 
-	int guess, random_number = rand() % 100;
+	int guess,
+		random_number = rand() % 100;
 	cout << "I selected a number between 0 and 99. Guess what it is." << endl;
 
 	do {
