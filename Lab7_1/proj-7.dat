@@ -1,0 +1,8 @@
+
+Provide the facility to either read the numbers from the keyboard or from a file, at user's option. 
+
+If the user chooses file input, the program should request a file name. 
+
+You may assume that there are fewer than 50 entries in the array. 
+
+Your program determines how many numbers there are.
