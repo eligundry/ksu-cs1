@@ -13,45 +13,51 @@ using namespace std;
 class StudentGrade
 {
 	public:
-		void input();
-		void output();
 	private:
 		double final_score(); 
 		char letter_grade();
+		char student_name[81];
 		double quiz_1,
 			   quiz_2,
 			   midterm,
 			   final;
 };
 
+void input(StudentGrade grade);
+void output(StudentGrade grade);
+
 int main()
 {
 	StudentGrade grade;
 
-	grade.input();
-	grade.output();
+	input(grade);
+	output(grade);
 
 	return 0;
 }
 
-void StudentGrade::input()
+void input(StudentGrade grade)
 {
-	cout << "What was the student's grade for quiz 1? (0-10)" << endl;
-	cin >> quiz_1;
-	cout << "And for quiz 2? (0-10)" << endl;
-	cin >> quiz_2;
-	cout << "How did they do on the midterm? (0-100)" << endl;
-	cin >> midterm;
-	cout << "And the final exam? (0-100)" << endl;
-	cin >> final;
+	cout << "#### CC Gradebook System ####" << endl; 
+
+	do {
+		cout << "What is the student's name? (Press Enter to exit)" << endl;
+
+		for (int num_of_students = 0; i < grade.student name; i++) {
+			cin >> grade.student_name; 
+		}
+
+	} while (grade.student_name != '\r')
+
 }
 
-void StudentGrade::output()
+void output(StudentGrade grade)
 {
-	cout << endl << "Quiz 1: " << (quiz_1 * 10) << endl
-		 << "Quiz 2: " << (quiz_2 * 10) << endl
-		 << "Midterm: " << midterm << endl
-		 << "Final Exam: " << final << endl << endl;
+	cout << endl << "Quiz 1: " << (grade.quiz_1 * 10) << endl
+		 << "Quiz 2: " << (grade.quiz_2 * 10) << endl
+		 << "Midterm: " << grade.midterm << endl
+		 << "Final Exam: " << grade.final << endl << endl;
+
 }
 
 double StudentGrade::final_score()
